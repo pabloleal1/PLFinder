@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://plfinder.com/sitemap.xml
+Sitemap: https://www.plfinder.es/sitemap.xml
