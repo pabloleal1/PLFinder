@@ -39,7 +39,7 @@ El formulario envía a `/api/contact`, pensado para desplegarse como función se
 Variables de entorno necesarias:
 
 - `RESEND_API_KEY`: API key de Resend.
-- `CONTACT_TO_EMAIL`: email de destino. Por defecto usa `PLFinder@outllook.es`.
+- `CONTACT_TO_EMAIL`: email de destino. Por defecto usa `PLFinder@outlook.es`.
 - `CONTACT_FROM_EMAIL`: remitente verificado en Resend. Si no se define, usa `PLFinder <onboarding@resend.dev>`.
 
 Para producción, configura un dominio/remitente verificado en Resend y usa ese correo en `CONTACT_FROM_EMAIL`.

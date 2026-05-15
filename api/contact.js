@@ -1,4 +1,4 @@
-const CONTACT_TO_EMAIL = process.env.CONTACT_TO_EMAIL || "PLFinder@outllook.es";
+const CONTACT_TO_EMAIL = process.env.CONTACT_TO_EMAIL || "PLFinder@outlook.es";
 const CONTACT_FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "PLFinder <onboarding@resend.dev>";
 
 const escapeHtml = (value = "") =>

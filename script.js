@@ -149,7 +149,7 @@ if (contactForm && formMessage) {
       contactForm.reset();
       formMessage.textContent = "Solicitud enviada. Te responderemos lo antes posible.";
     } catch (error) {
-      formMessage.textContent = "No se pudo enviar la solicitud. Escríbenos a PLFinder@outllook.es.";
+      formMessage.textContent = "No se pudo enviar la solicitud. Escríbenos a PLFinder@outlook.es.";
     } finally {
       if (submitButton) {
         submitButton.disabled = false;
