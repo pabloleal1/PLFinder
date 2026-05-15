@@ -122,10 +122,6 @@ if (contactForm && formMessage) {
     event.preventDefault();
 
     const data = new FormData(contactForm);
-    const name = data.get("name");
-    const email = data.get("email");
-    const company = data.get("company");
-    const message = data.get("message");
     const submitButton = contactForm.querySelector("button[type='submit']");
 
     formMessage.textContent = "Enviando solicitud...";
@@ -134,12 +130,9 @@ if (contactForm && formMessage) {
     }
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ name, email, company, message })
+        body: data
       });
 
       if (!response.ok) {
