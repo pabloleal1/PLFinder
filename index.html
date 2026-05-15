@@ -349,8 +349,9 @@
 
           <label>
             Mensaje
-            <textarea name="message" rows="5" placeholder="Cuéntanos qué te está ocupando demasiado tiempo..."
-              required></textarea>
+            <textarea name="message" id="message" rows="5" maxlength="1000"
+              placeholder="Cuéntanos qué te está ocupando demasiado tiempo..." required></textarea>
+            <span class="character-count" id="messageCount">0/1000</span>
           </label>
 
           <button type="submit" class="btn btn-primary">Enviar solicitud</button>

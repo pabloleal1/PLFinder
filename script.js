@@ -38,6 +38,8 @@ const navLinks = mainNav ? Array.from(mainNav.querySelectorAll("a")) : [];
 const year = document.getElementById("year");
 const contactForm = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
+const messageInput = document.getElementById("message");
+const messageCount = document.getElementById("messageCount");
 
 const setActiveNavLink = (href) => {
   navLinks.forEach((link) => {
@@ -116,6 +118,16 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+if (messageInput && messageCount) {
+  const maxLength = Number(messageInput.getAttribute("maxlength")) || 1000;
+  const updateMessageCount = () => {
+    messageCount.textContent = `${messageInput.value.length}/${maxLength}`;
+  };
+
+  messageInput.addEventListener("input", updateMessageCount);
+  updateMessageCount();
+}
 
 if (contactForm && formMessage) {
   contactForm.addEventListener("submit", async (event) => {
