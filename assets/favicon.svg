@@ -1,0 +1,5 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PLFinder">
+  <rect width="64" height="64" rx="16" fill="#171934"/>
+  <path d="M20 48V20a14 14 0 1 1 0 19" fill="none" stroke="#2db1e8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M20 48V35" fill="none" stroke="#1677df" stroke-width="8" stroke-linecap="round"/>
+</svg>

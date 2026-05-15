@@ -29,6 +29,17 @@ http://localhost:8080
 
 ## Cambios rápidos
 
-- Cambia `contact@plfinder.com` por el email real en `index.html` y `script.js`.
 - Sustituye el logo textual `PL` por tu imagen si ya tienes logo definitivo.
 - Los textos están en español con algunos claims en inglés para dar imagen SaaS/QA internacional.
+
+## Formulario de contacto
+
+El formulario envía a `/api/contact`, pensado para desplegarse como función serverless en Vercel.
+
+Variables de entorno necesarias:
+
+- `RESEND_API_KEY`: API key de Resend.
+- `CONTACT_TO_EMAIL`: email de destino. Por defecto usa `PLFinder@outllook.es`.
+- `CONTACT_FROM_EMAIL`: remitente verificado en Resend. Si no se define, usa `PLFinder <onboarding@resend.dev>`.
+
+Para producción, configura un dominio/remitente verificado en Resend y usa ese correo en `CONTACT_FROM_EMAIL`.
