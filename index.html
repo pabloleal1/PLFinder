@@ -326,9 +326,11 @@
           </p>
         </div>
 
-        <form class="contact-form reveal" id="contactForm">
+        <form class="contact-form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="dcb92efb-c67b-4760-90db-03e4ab6518e4" />
           <input type="hidden" name="subject" value="Nueva solicitud de contacto desde PLFinder" />
+          <input type="hidden" name="from_name" value="PLFinder Web" />
+          <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" />
 
           <label>
             Nombre

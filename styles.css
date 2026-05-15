@@ -1051,6 +1051,10 @@ h3 {
   color: var(--brand);
 }
 
+.hidden {
+  display: none;
+}
+
 .site-footer {
   padding: 26px 0;
   background: var(--surface);

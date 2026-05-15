@@ -134,8 +134,9 @@ if (contactForm && formMessage) {
         method: "POST",
         body: data
       });
+      const result = await response.json();
 
-      if (!response.ok) {
+      if (!response.ok || !result.success) {
         throw new Error("Contact request failed");
       }
 
