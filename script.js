@@ -305,6 +305,38 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
+document.querySelectorAll(".faq-list").forEach((faqList, listIndex) => {
+  faqList.classList.add("is-enhanced");
+
+  faqList.querySelectorAll(".faq-item").forEach((item, itemIndex) => {
+    const title = item.querySelector("h3");
+    const answer = item.querySelector("p");
+
+    if (!title || !answer) {
+      return;
+    }
+
+    const answerId = `faq-answer-${listIndex}-${itemIndex}`;
+    const button = document.createElement("button");
+
+    answer.id = answerId;
+    button.type = "button";
+    button.className = "faq-toggle";
+    button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-controls", answerId);
+    button.setAttribute("aria-label", title.textContent.trim());
+    button.textContent = "+";
+
+    button.addEventListener("click", () => {
+      const isOpen = item.classList.toggle("is-open");
+      button.setAttribute("aria-expanded", String(isOpen));
+      button.textContent = isOpen ? "-" : "+";
+    });
+
+    item.prepend(button);
+  });
+});
+
 if (messageInput && messageCount) {
   const maxLength = Number(messageInput.getAttribute("maxlength")) || 1000;
   const updateMessageCount = () => {
