@@ -22,7 +22,6 @@ const headerCopy = {
       { title: "Testing de back", href: "testing-apis.html" },
       { title: "Usabilidad", href: "usabilidad.html" }
     ],
-    iqa: "iQA",
     method: "Cómo trabajamos",
     services: "Servicios",
     contact: "Contacto",
@@ -45,7 +44,6 @@ const headerCopy = {
       { title: "Backend testing", href: "testing-apis.html" },
       { title: "Usability", href: "usabilidad.html" }
     ],
-    iqa: "iQA",
     method: "How we work",
     services: "Services",
     contact: "Contact",
@@ -68,7 +66,6 @@ const headerCopy = {
       { title: "Testing backend", href: "testing-apis.html" },
       { title: "Utilisabilité", href: "usabilidad.html" }
     ],
-    iqa: "iQA",
     method: "Comment nous travaillons",
     services: "Services",
     contact: "Contact",
@@ -91,7 +88,6 @@ const headerCopy = {
       { title: "Testing de backend", href: "testing-apis.html" },
       { title: "Usabilidade", href: "usabilidad.html" }
     ],
-    iqa: "iQA",
     method: "Como trabalhamos",
     services: "Serviços",
     contact: "Contacto",
@@ -185,7 +181,6 @@ if (headerMount) {
               ${testingTypeLinks}
             </div>
           </div>
-          <a href="${sectionHref("iqa")}">iQA</a>
           <a href="${sectionHref("method")}">${copy.method}</a>
           <a href="servicios.html">${copy.services}</a>
           <a href="${sectionHref("contact")}" class="nav-contact-link">${copy.contact}</a>
