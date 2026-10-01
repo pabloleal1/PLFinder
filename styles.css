@@ -1487,6 +1487,23 @@ h3 {
   max-width: 860px;
 }
 
+.service-hero-visual {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 860px);
+  margin: 36px auto 0;
+}
+
+.service-hero-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.seo-hero > .service-hero-visual {
+  width: min(calc(100% - 40px), 860px);
+}
+
 .seo-hero h1,
 .page-hero h1 {
   max-width: 820px;
